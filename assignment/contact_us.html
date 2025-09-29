@@ -7,23 +7,47 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <h1 class="main-header">Contact Us</h1>
-    <h2>Tourist Office</h2>
-    <p></p>
-    <form>
-      <h2>Contact Form</h2>
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname">
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname"><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br>
-      <label for="message">Your Message</label><br>
-      <textarea id="message" name="message" placeholder="Type your message here"></textarea><br>
-      <input type="checkbox" id="marketing" name="marketing" value="Yes">
-      <label for="marketing">Yes, I’d love to receive travel tips, updates, and offers about visiting the Orkney Islands.</label><br>
-      <input type="submit" value="Submit">
-    </form>
-    <a href="index.html">Return Home</a>
+    <div id="hero-section">
+      <video autoplay muted loop playsinline id="background-vid">
+        <source src="video/index_vid.mp4" type="video/mp4" />
+        Your browser does not support this video
+      </video>
+      <h1 class="hero-section-header">Visit Orkney</h1>
+      <nav class="nav">
+        <a href="explore.html">Explore</a>
+        <a href="getting_here.html">Getting Here</a>
+        <a href="live_and_work.html">Live and Work</a>
+        <a href="culture_and_events.html">Culture and Events</a>
+        <a href="contact_us.html">Contact Us</a>
+      </nav>
+    </div>
+    <main id="main-content">
+      <h1 class="main-header">Contact Us</h1>
+      <h2>Tourist Office</h2>
+      <p></p>
+      <form>
+        <h2>Contact Form</h2>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br />
+        <label for="message">Your Message</label><br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Type your message here"
+        ></textarea
+        ><br />
+        <input type="checkbox" id="marketing" name="marketing" value="Yes" />
+        <label for="marketing"
+          >Yes, I’d love to receive travel tips, updates, and offers about
+          visiting the Orkney Islands.</label
+        ><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <a href="index.html">Return Home</a>
+    </main>
   </body>
 </html>
