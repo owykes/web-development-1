@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Slab', serif;
+ 
 }
 
 * {
@@ -12,6 +13,16 @@ body {
   overflow-x: hidden;
 }
 
+#mainpage-vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  min-width: 100%;
+  max-width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
 
 #background-vid {
     position: fixed;
@@ -20,9 +31,9 @@ body {
     top: 0;
     min-width: 100%;
     max-width: 100%;
+    height:45%;
     z-index: -1;
     object-fit: cover;
-    
 }
 
 #hero-section {
@@ -31,14 +42,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 78vh; /* viewport height full until content below*/
   z-index: 1; /* above background video */
   text-align: center;
 
 }
 
 #main-content {
-  position: relative;
+  position: fixed;
   z-index: 2;
   background-color: rgb(148, 126, 82);
   font-family: 'Roboto Slab', serif;
@@ -50,11 +60,10 @@ body {
   color: white;
   font-size: 8rem;
   margin-bottom: 2rem;
-  padding-top: 25%;
 }
 .content-section-header {
   color: white;
-  font-size: 8rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   text-align: left;
   padding-left: 2.5%;
@@ -62,19 +71,23 @@ body {
   background-color: rgb(230, 193, 121);
 
 }
+.content {
+  padding-left: 2.5%;
+}
+.header {
+  padding-left: 2.5%;
+}
 .nav {
   display: flex;
   gap: 2rem;
 }
-
+#form {
+  display: inline-block;
+  padding-left: 2.5%; 
+}
 .nav a, .header {
   color: white;
   text-decoration: none;
-  /*text-shadow: 
-    -1px -1px 1px black,
-     1px -1px 1px black,
-    -1px  1px 1px black,
-     1px  1px 1px black; */
   font-size: 2rem;
   font-weight: 200;
 }
@@ -87,13 +100,6 @@ body {
 /* nav anchors when hovered will increase in font size */
 .nav a:hover {
   font-size: 2.5rem;
-}
-
-p {
-    font-style: ;
-    font-weight: ;
-    text-decoration: ;
-    font-size: ;
 }
 
 #explore-pic {
