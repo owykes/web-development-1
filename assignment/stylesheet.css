@@ -1,110 +1,161 @@
-html, body {
+/* Reset default browser styles and set consistent box model */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
- 
-}
-
-* {
   box-sizing: border-box;
 }
 
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for rem units */
+}
+
+/* Base body styles */
 body {
-  overflow-x: hidden;
+  font-family: 'Roboto Slab', serif; /* Elegant serif font */
+  background-color: #fdfcf9; /* Light neutral background */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6; /* Comfortable line spacing */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-#mainpage-vid {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  min-width: 100%;
-  max-width: 100%;
-  z-index: -1;
-  object-fit: cover;
-}
-
+/* Background video styles */
 #background-vid {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    min-width: 100%;
-    max-width: 100%;
-    height:45%;
-    z-index: -1;
-    object-fit: cover;
+  position: fixed; /* Stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Full viewport height */
+  object-fit: cover; /* Ensures video fills container without distortion */
+  z-index: -1; /* Places video behind all other content */
 }
 
+/* Dark overlay on top of video for better text contrast */
+#hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 0; /* Behind hero content but above video */
+}
+
+/* Hero section container */
 #hero-section {
   position: relative;
+  height: 100vh; /* Full screen height */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  z-index: 1; /* above background video */
+  align-items: center;
   text-align: center;
-
+  color: white; /* Text color over dark overlay */
+  z-index: 1; /* Above overlay and video */
 }
 
-#main-content {
-  position: fixed;
-  z-index: 2;
-  background-color: rgb(148, 126, 82);
-  font-family: 'Roboto Slab', serif;
-  color: white;
- 
-}
-
+/* Main heading in hero section */
 .hero-section-header {
-  color: white;
-  font-size: 8rem;
-  margin-bottom: 2rem;
+  font-size: clamp(8rem, 8vw, 6rem); /* Responsive font size */
+  font-weight: 700;
+  z-index: 1;
+  margin-bottom: 1rem;
 }
-.content-section-header {
-  color: white;
-  font-size: 6rem;
-  margin-bottom: 2rem;
-  text-align: left;
-  padding-left: 2.5%;
-  padding-bottom: 1.5%;
-  background-color: rgb(230, 193, 121);
 
-}
-.content {
-  padding-left: 2.5%;
-}
-.header {
-  padding-left: 2.5%;
-}
+/* Navigation bar styles */
 .nav {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+  gap: 1.5rem; /* Space between links */
+  z-index: 1;
 }
-#form {
-  display: inline-block;
-  padding-left: 2.5%; 
-}
-.nav a, .header {
+
+/* Navigation links */
+.nav a {
   color: white;
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 200;
-}
-/* transition for hover for anchor in hero */
-.nav a {
-  transition-property: font-size;
-  transition-duration: 2s;
+  font-weight: 500;
+  transition: transform 0.3s ease; /* Smooth scale on hover */
 }
 
-/* nav anchors when hovered will increase in font size */
+/* Hover effect for nav links */
 .nav a:hover {
-  font-size: 2.5rem;
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
+/* Main content container */
+#main-content {
+  position: relative;
+  z-index: 2; /* Above hero and video */
+  background-color: #967c52; /* Warm brown background */
+  color: white;
+}
+
+/* Section header inside main content */
+.content-section-header {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  background-color: #e6c179; /* Golden accent */
+  padding: 1rem 2rem;
+  color: black; 
+}
+
+/* Individual content sections */
+.content-section {
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+/* Subheadings for each island */
+.header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph content */
+.content {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+/* Layout for image + text side-by-side */
+.explore-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+/* Image styling */
 #explore-pic {
+  max-width: 300px;
+  height: auto;
   border: 4px solid white;
-  border-radius: 25%;
+  border-radius: 20px;
+  margin: 0;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  #explore-pic {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .content-section-header {
+    font-size: 2rem;
+  }
+
+  .hero-section-header {
+    font-size: 4rem;
+  }
 }
