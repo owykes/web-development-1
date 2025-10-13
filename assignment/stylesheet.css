@@ -31,6 +31,14 @@ body {
   z-index: -1; /* Places video behind all other content */
 }
 
+/* Dark overlay on top of index video for better text contrast */
+#index-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 0; /* Behind hero content but above video */
+}
 /* Dark overlay on top of video for better text contrast */
 #hero-section::before {
   content: "";
@@ -40,8 +48,20 @@ body {
   z-index: 0; /* Behind hero content but above video */
 }
 
-/* Hero section container */
+/* Hero section container for rest of the pages */
 #hero-section {
+  position: relative;
+  height: 50vh; /* half screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Text color over dark overlay */
+  z-index: 1; /* Above overlay and video */
+}
+/* Hero section container */
+#index-hero-section {
   position: relative;
   height: 100vh; /* Full screen height */
   display: flex;
@@ -66,7 +86,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
   justify-content: center;
-  gap: 1.5rem; /* Space between links */
+  gap: 1.75rem; /* Space between links */
   z-index: 1;
 }
 
@@ -105,7 +125,10 @@ body {
 .content-section {
   margin-bottom: 3rem;
   padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
 }
+
 
 /* Subheadings for each island */
 .header {
@@ -113,11 +136,11 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Paragraph content */
+/* Paragraph content and embedded image*/
 .content {
   font-size: 1.125rem;
   margin-bottom: 1rem;
-  padding-left: 2rem;
+  display: flex;
 }
 
 /* Layout for image + text side-by-side */
@@ -136,6 +159,10 @@ body {
   border-radius: 20px;
   margin: 0;
   flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+#form {
+
 }
 
 /* Responsive adjustments for smaller screens */
