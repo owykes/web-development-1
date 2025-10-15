@@ -138,6 +138,11 @@ body {
   padding-left: 2rem;
 }
 
+.contact-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 /* Paragraph content and embedded image*/
 .content {
   font-size: 1.125rem;
@@ -167,7 +172,37 @@ body {
 #form {
   background-color: white;
   color:black;
-  margin: 2rem;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  min-width: 350px;
+  max-width: 700px;
+  margin: 0 auto;
+
+}
+
+#form label,
+#form textarea,
+#form input {
+  margin: 8px; 
+  display: block;
+  width: 35%;
+  box-sizing: border-box;
+  align-items: left;
+}
+
+#form input[type="submit"]{
+  width: auto;
+  margin: 8px auto;
+  display: block;
+  text-align: center;
+}
+
+#form textarea {
+  min-height: 300px;
+  min-width: 300px;
+  
 }
 
 /* Responsive adjustments for smaller screens */
@@ -190,4 +225,48 @@ body {
   .hero-section-header {
     font-size: 4rem;
   }
+/* css for tab section on getting here page */
 }
+
+  .tab-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: sans-serif;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .tab-label {
+    display: inline-block;
+    padding: 1rem;
+    background: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    color:black
+  }
+
+  .tab-label:hover {
+    background: #ddd;
+  }
+
+  input:checked + .tab-label {
+    background: #fff;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+  }
+
+  .tab-content {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: none;
+    background-color: white;
+    color: black;
+  }
+
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2 {
+    display: block;
+  }
