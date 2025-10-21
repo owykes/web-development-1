@@ -104,7 +104,6 @@ body {
 
 .content-section-header {
     font-size: 3rem;
-    margin-bottom: 2rem;
     background-color: #e6c179;
     padding: 1rem 2rem;
     color: black;
@@ -115,7 +114,9 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-
+.culture-header {
+    font-size: 2rem;
+}
 .header {
     padding-left: 2rem;
 }
@@ -131,6 +132,27 @@ body {
     max-width: 50%;
 }
 
+
+.culture-section {
+    background: url('images/scroll1.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+
+.heritage-section {
+    background: url('images/scroll2.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+
+.traditions-section {
+    background: url('images/scroll3.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
 /*images and layout */
 
 .explore-layout {
