@@ -1,309 +1,299 @@
-/* Reset default browser styles and set consistent box model */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Enable smooth scrolling for anchor links */
 html {
-  scroll-behavior: smooth;
-  font-size: 16px; /* Base font size for rem units */
+    scroll-behavior: smooth; /*only useful if i target page sections in achors */
+    font-size: 16px;
 }
 
-/* Base body styles */
 body {
-  font-family: 'Roboto Slab', serif; /* Elegant serif font */
-  background-color: #fdfcf9; /* Light neutral background */
-  color: #333; /* Dark text for readability */
-  line-height: 1.6; /* Comfortable line spacing */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Roboto Slab', 'Serif';
+    background-color: #fdfcf9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /*does allow content to become bigger than the screen, avoids horizontal scroll*/
 }
 
-/* Background video styles */
+/*back vid and overlay for readability*/ 
+
 #background-vid {
-  position: fixed; /* Stays in place while scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Full viewport height */
-  object-fit: cover; /* Ensures video fills container without distortion */
-  z-index: -1; /* Places video behind all other content */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* Dark overlay on top of index video for better text contrast */
-#index-hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 0; /* Behind hero content but above video */
-}
-/* Dark overlay on top of video for better text contrast */
+#index-hero-section::before, 
 #hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 0; /* Behind hero content but above video */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-/* Hero section container for rest of the pages */
+/* hero sections */
+
+#index-hero-section,
 #hero-section {
-  position: relative;
-  height: 50vh; /* half screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; /* Text color over dark overlay */
-  z-index: 1; /* Above overlay and video */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
 }
-/* Hero section container */
+
 #index-hero-section {
-  position: relative;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; /* Text color over dark overlay */
-  z-index: 1; /* Above overlay and video */
+    height: 100vh;
 }
 
-/* Main heading in hero section */
+#hero-section {
+    height: 50vh;  /*allows space for website content */
+}
+
 .hero-section-header {
-  font-size: clamp(8rem, 8vw, 6rem); /* Responsive font size */
-  font-weight: 700;
-  z-index: 1;
-  margin-bottom: 1rem;
+    font-size: clamp(6rem, 8vw, 8rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    z-index: 1;
 }
 
-/* Navigation bar styles */
+/* Nav */
+
 .nav {
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: center;
-  gap: 1.75rem; /* Space between links */
-  z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;#
+    gap: 1.75rem;
+    z-index: 1;
 }
 
-/* Navigation links */
 .nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  transition: transform 0.3s ease; /* Smooth scale on hover */
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect for nav links */
 .nav a:hover {
-  transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1);
 }
 
-/* Main content container */
+/* main content */
+
 #main-content {
-  position: relative;
-  z-index: 2; /* Above hero and video */
-  background-color: #967c52; /* Warm brown background */
-  color: white;
+    position: relative;
+    z-index: 2;
+    background-color: #967c52;
+    color: white;
 }
 
-/* Section header inside main content */
-.content-section-header {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  background-color: #e6c179; /* Golden accent */
-  padding: 1rem 2rem;
-  color: black; 
-}
-
-/* Individual content sections */
 .content-section {
-  margin-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
+    margin-bottom: 3rem;
+    padding: 0 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.content-section-header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    background-color: #e6c179;
+    padding: 1rem 2rem;
+    color: black;
+}
 
-/* Subheadings for each island */
+.header,
+.contact-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 .header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
+    padding-left: 2rem;
 }
 
 .contact-header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+    text-align: center;
 }
-/* Paragraph content and embedded image*/
+
 .content {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-  display: flex;
-  max-width: 50%;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    display: flex;
+    max-width: 50%;
 }
 
-/* Layout for image*/
+/*images and layout */
+
 .explore-layout {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  flex-wrap: wrap; /* Allows stacking on small screens */
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-/* Image styling */
-#explore-pic {
-  max-width: 50%;
-  height: auto;
-  border: 4px solid white;
-  border-radius: 20px;
-  margin: 0;
-  flex-shrink: 0; /* Prevent image from shrinking */
+.explore-pic {
+    max-width:50%;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 20px;
+    flex-shrink: 0;
+    margin: 0 auto;
 }
+
+/* form styling */
 
 #form {
-  background-color: white;
-  color:black;
-  font-size: 16px;
-  border-radius: 8px;
-  padding: 20px;
-  width: 80%;
-  min-width: 350px;
-  max-width: 700px;
-  margin: 0 auto;
- 
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    min-width: 350px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-#form label{
-  margin: 8px;
-  margin-left: 0;
-  margin-bottom: 0;
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  align-items: left;
-}
-#form textarea{ 
-  width: 100%;
-  min-height: 300px;
-  min-width: 300px;
-  display: block;
-  margin: 0 auto;
+#form label {
+    margin: 8px 0;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#form input[type="submit"]{
-  width: auto;
-  margin: 8px auto;
-  display: block;
-  text-align: center;
+#form textarea {
+    width: 100%;
+    min-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+#form input[type="submit"] {
+    display: block;
+    margin: 8px auto;
+    text-align: center;
 }
 
 #marketing {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 #marketing label {
-  padding-left: 2rem;
+    padding-left: 2rem;
 }
 
-#marketing input{
-  scale: 1.3;
+#marketing input {
+    scale: 1.3;
 }
+
+/* social media icons */
 
 .fa {
-  padding:15px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+    padding: 15px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: opacity 0.3s;
 }
 
 .fa:hover {
-  opacity: 0.7
+    opacity: 0.7;
 }
 
 .fa-instagram {
-  color: white;
-  background: black;
+    background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+    color: white;
 }
+
 .fa-facebook {
-  color: white;
-  background: #3B5998;
+    background: #3B5998;
+    color: white;
 }
 
+/* Tabs */
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #explore-pic {
-    float: none;
-    display: block;
-    margin: 1rem auto;
-  }
-
-  .content-section-header {
-    font-size: 2rem;
-  }
-
-  .hero-section-header {
-    font-size: 4rem;
-  }
-/* css for tab section on getting here page */
-}
-
-  .tab-container {
+.tab-container {
     max-width: 600px;
     margin: 2rem auto;
     font-family: sans-serif;
-  }
+}
 
-  input[type="radio"] {
-    display: none;
-  }
+input[type="radio"] {
+    display:auto;
+}
 
-  .tab-label {
-    display: inline-block;
+.tab-label {
+    display:inline-block; 
     padding: 1rem;
     background: #eee;
     cursor: pointer;
     border: 1px solid #ccc;
     margin-right: -1px;
-    color:black
-  }
+    color: black;
+    transition: background 0.3s;   
+}
 
-  .tab-label:hover {
+.tab-label:hover {
     background: #ddd;
-  }
+}
 
-  input:checked + .tab-label {
+input:checked + .tab-label {
     background: #fff;
     border-bottom: 1px solid white;
     font-weight: bold;
-  }
+}
 
-  .tab-content {
+.tab-content {
     border: 1px solid #ccc;
     padding: 1rem;
     display: none;
     background-color: white;
     color: black;
-  }
+}
 
-  #tab1:checked ~ #content1,
-  #tab2:checked ~ #content2 {
-    display: block;
-  }
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+    display:block;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #explore-pic {
+        max-width: 100%;
+    }
+
+    .content-section-header {
+        font-size: 2rem;
+    }
+
+    .hero-section-header {
+        font-size: 4rem;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+}
