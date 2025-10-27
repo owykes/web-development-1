@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /*only useful if i target page sections in achors */
+    scroll-behavior: smooth; /*only useful if i target page sections in anchors */
     font-size: 16px;
 }
 
@@ -105,7 +105,6 @@ body {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    border-top: ;
 }
 
 .content-section {
@@ -132,10 +131,6 @@ body {
     height: auto;
 }
 
-.banner-img {
-    width: 100%;
-    display:block;
-}
 
 .culture-header {
     font-size: 2rem;
@@ -151,6 +146,7 @@ body {
 .content {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    margin-right: 1.5rem;
     display: flex;
     max-width: 50%;
 }
@@ -199,16 +195,17 @@ body {
     background-color: white;
     color: black;
     font-size: 16px;
+    font-family: inherit;
     border-radius: 8px;
     padding: 20px;
     width: 80%;
     min-width: 350px;
     max-width: 700px;
     margin: 0 auto;
+    /* add a thin border here */
 }
 
 #form label {
-    margin: 8px 0;
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -348,4 +345,5 @@ input:checked + .tab-label {
     .content {
         max-width: 100%;
     }
+    /* add newer sections into here */
 }
