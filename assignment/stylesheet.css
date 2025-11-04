@@ -120,21 +120,18 @@ body {
     max-width: 50%;
 }
 
-
-.section1 {
-    background: url('images/scroll1.png') center/cover no-repeat;
+.section1, .section2 ,.section3 {
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
     
 }
+.section1 {
+    background: url('images/scroll1.png') center/cover no-repeat;  
+}
 
 .section2 {
     background: url('images/scroll2.png') center/cover no-repeat;
-    padding: 4rem 2rem;
-    color: white;
-    height: 100vh;
-
 }
 
 .block-inner {
@@ -145,6 +142,9 @@ body {
 
 .section3 {
     background: url('images/scroll3.png') center/cover no-repeat;
+}
+
+.sectionfour1, .sectionfour2, .sectionfour3, .sectionfour4 {
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
@@ -152,31 +152,20 @@ body {
 
 .sectionfour1 {
     background: url('images/4scroll1.png') center/cover no-repeat;
-    padding: 4rem 2rem;
-    color: white;
-    height: 100vh;
 }
 
 .sectionfour2 {
     background: url('images/4scroll2.png') center/cover no-repeat;
-    padding: 4rem 2rem;
-    color: white;
-    height: 100vh;
 }
 
 .sectionfour3 {
     background: url('images/4scroll3.png') center/cover no-repeat;
-    padding: 4rem 2rem;
-    color: white;
-    height: 100vh;
 }
 
 .sectionfour4 {
     background: url('images/4scroll4.png') center/cover no-repeat;
-    padding: 4rem 2rem;
-    color: white;
-    height: 100vh;
 }
+
 nav.top a {
     display: flex;
     justify-content: center;
@@ -210,6 +199,14 @@ nav.top a:hover {
     margin: 0 auto;
 }
 
+.getting-pic {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid white;
+    
+}
 
 /* form styling */
 
@@ -302,7 +299,7 @@ nav.top a:hover {
 /* Tabs */
 
 .tab-container {
-    max-width: 600px;
+    max-width: 75%;
     margin: 2rem auto;
     font-family: inherit;
 }
@@ -314,12 +311,14 @@ input[type="radio"] {
 .tab-label {
     display:inline-block; 
     padding: 1rem;
-    background: #eee;
+    background: #d7ad37;
     cursor: pointer;
     border: 1px solid #ccc;
     margin-right: -1px;
-    color: black;
-    transition: background 0.3s;   
+    color: white;
+    transition: background 0.3s;
+    font-family: inherit;
+    font-size: 16px;   
 }
 
 .tab-label:hover {
@@ -327,7 +326,7 @@ input[type="radio"] {
 }
 
 input:checked + .tab-label {
-    background: #fff;
+    background: #edbe3e;
     border-bottom: 1px solid white;
     font-weight: bold;
 }
@@ -336,14 +335,22 @@ input:checked + .tab-label {
     border: 1px solid #ccc;
     padding: 1rem;
     display: none;
-    background-color: white;
-    color: black;
+    background-color: #d7ad37;
+    color: white;
+    width: 100%;
 }
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2 {
     display:block;
     
+}
+
+.tab-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
 /* responsive design */
