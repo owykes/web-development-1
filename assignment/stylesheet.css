@@ -96,23 +96,6 @@ body {
     color: white;
 }
 
-#getting-main-content {
-    color: white;
-    background: url('images/travel-background.png');
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.content-section {
-    margin-bottom: 3rem;
-    padding: 0 2rem 2rem;
-    display: flex;
-}
-
 .content-section-header {
     font-size: 4rem;
     color: white;
@@ -123,20 +106,6 @@ body {
 .contact-header {
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-.organic-header {
-    position: relative;
-    text-align: center;
-    height: auto;
-}
-
-
-.culture-header {
-    font-size: 2rem;
-}
-.header {
-    padding-left: 2rem;
 }
 
 .contact-header {
@@ -152,25 +121,76 @@ body {
 }
 
 
-.culture-section {
+.section1 {
     background: url('images/scroll1.png') center/cover no-repeat;
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
+    
 }
 
-.heritage-section {
+.section2 {
     background: url('images/scroll2.png') center/cover no-repeat;
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
+
 }
 
-.traditions-section {
+.block-inner {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.section3 {
     background: url('images/scroll3.png') center/cover no-repeat;
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
+}
+
+.sectionfour1 {
+    background: url('images/4scroll1.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+
+.sectionfour2 {
+    background: url('images/4scroll2.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+
+.sectionfour3 {
+    background: url('images/4scroll3.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+
+.sectionfour4 {
+    background: url('images/4scroll4.png') center/cover no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    height: 100vh;
+}
+nav.top a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: inherit;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+nav.top a:hover {
+    scale:1.1 ;
 }
 /*images and layout */
 
@@ -180,8 +200,9 @@ body {
 
 }
 
-.explore-pic, .livework-pic {
+.explore-pic, .livework-pic, .culture-pic {
     max-width:50%;
+    max-height:600px;
     height: auto;
     border: 4px solid white;
     border-radius: 20px;
@@ -241,6 +262,7 @@ body {
 /* social media icons */
 
 .social-section {
+    padding-top: 4rem;
     display: flex;
     justify-content: center;
     gap: 1.75rem;
