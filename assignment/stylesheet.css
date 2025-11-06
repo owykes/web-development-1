@@ -114,10 +114,10 @@ body {
 
 .content {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    margin-right: 1.5rem;
-    display: flex;
-    max-width: 50%;
+    max-width: none;
+    flex: 1;
+    margin-bottom: 1.5rem;
+
 }
 
 .section1, .section2 ,.section3 {
@@ -137,7 +137,18 @@ body {
 .block-inner {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
 
+}
+
+.block-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .section3 {
@@ -176,18 +187,13 @@ nav.top a {
     font-weight: bold;
     padding-bottom: 1rem;
     padding-top: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
 nav.top a:hover {
-    scale:1.1 ;
+    transform:scale(1.1);
 }
 /*images and layout */
-
-.explore-layout {
-    display: flex;
-    gap: 2rem;
-
-}
 
 .explore-pic, .livework-pic, .culture-pic {
     max-width:50%;
@@ -196,7 +202,17 @@ nav.top a:hover {
     border: 4px solid white;
     border-radius: 20px;
     flex-shrink: 0;
+    flex: 1;
     margin: 0 auto;
+}
+
+.contact-pic {
+    width: 100%;
+    max-width: 100%;
+    min-width: 400px;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 20px;
 }
 
 .getting-pic {
@@ -205,7 +221,38 @@ nav.top a:hover {
     height: auto;
     border-radius: 20px;
     border: 4px solid white;
+    flex-shrink: 0;
     
+}
+.map {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+/* visitor centre opening table */
+
+.visitor-opening {
+    width: 100%;
+    max-width: 300px;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color:  #be9524;
+    border: 3px solid white;
+
+}
+
+.visitor-opening th,
+.visitor-opening td {
+    border: 2px solid #ccc;
+    padding: 0.5rem 0.5rem;
+    text-align: left;
+    
+}
+
+.visitor-opening th {
+    background-color: #d7ad37;
 }
 
 /* form styling */
@@ -221,13 +268,14 @@ nav.top a:hover {
     min-width: 350px;
     max-width: 700px;
     margin: 0 auto;
-    /* add a thin border here */
 }
 
 #form label {
     display: flex;
     width: 100%;
     box-sizing: border-box;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
 }
 
 #form textarea {
@@ -237,10 +285,22 @@ nav.top a:hover {
     margin: 0 auto;
 }
 
+textarea {
+    font-family: 'Lora', 'San-Serif';
+    padding: 0.25rem;
+} 
+
 #form input[type="submit"] {
     display: block;
     margin: 8px auto;
     text-align: center;
+    font-family: inherit;
+    padding: 0.25rem 0.5rem;
+    font-size: 16px;
+}
+
+#form select {
+    font-family: inherit;
 }
 
 #marketing {
@@ -299,7 +359,7 @@ nav.top a:hover {
 /* Tabs */
 
 .tab-container {
-    max-width: 75%;
+    max-width: 80%;
     margin: 2rem auto;
     font-family: inherit;
 }
@@ -340,6 +400,10 @@ input:checked + .tab-label {
     width: 100%;
 }
 
+.tab-header {
+    padding-left: 2rem;
+}
+
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2 {
     display:block;
@@ -351,6 +415,8 @@ input:checked + .tab-label {
     gap: 2rem;
     align-items: flex-start;
     flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0rem 2rem 2rem 2rem;
 }
 
 /* responsive design */
@@ -374,6 +440,30 @@ input:checked + .tab-label {
 
     .content {
         max-width: 100%;
+    }
+
+    .getting-pic {
+        max-width: 100%;
+    }
+
+    .tab-inner {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .map {
+        height: auto;
+        max-width: 100%
+    }
+
+    #form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .visitor-opening th,
+    .visitor-opening td {
+        font-size: 0.9rem;
     }
     /* add newer sections into here */
 }
