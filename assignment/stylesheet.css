@@ -193,6 +193,18 @@ nav.top a {
 nav.top a:hover {
     transform:scale(1.1);
 }
+
+#northlink {
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+#northlink:hover {
+    transform:scale(1.1);
+}
 /*images and layout */
 
 .explore-pic, .livework-pic, .culture-pic {
@@ -255,6 +267,26 @@ nav.top a:hover {
     background-color: #d7ad37;
 }
 
+/* Ferry times table */
+.ferry-routes {
+    width: 100%;
+    max-width: 350px;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #be9524;
+    border: 3px solid white;
+}
+
+.ferry-routes th, 
+.ferry-routes td {
+    border: 2px solid #ccc;
+    padding: 0.5rem 0.5rem;
+    text-align: left;
+}
+
+.ferry-routes th {
+    background-color: #d7ad37;
+}
 /* form styling */
 
 #form {
