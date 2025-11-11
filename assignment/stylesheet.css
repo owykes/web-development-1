@@ -211,6 +211,53 @@ nav.top a:hover {
 #loganair:hover {
     transform:scale(1.1);
 }
+/* slides for accomadation */
+
+.slideshow-container {
+    max-width: 700px;
+    margin: auto; 
+    position: relative;
+    background: #d7ad37;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    padding: 10px; 
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 20px;
+    border: 4px solid white;
+}
+
+.caption {
+    padding: 5px;
+    font-family: inherit;
+    color: white;
+}
+
+.slidenav {
+    text-align: center;
+    padding: 10px;
+}
+
+.slidenav label {
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0 5px;
+}
+
+#slide1:checked ~ .s1,
+#slide2:checked ~ .s2,
+#slide3:checked ~ .s3,
+#slide4:checked ~ .s4 {
+    display: block;
+    }
 /*images and layout */
 
 .explore-pic, .livework-pic, .culture-pic {
