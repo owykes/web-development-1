@@ -103,7 +103,8 @@ body {
 }
 
 .header,
-.contact-header {
+.contact-header,
+.culture-header {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -194,7 +195,8 @@ nav.top a:hover {
     transform:scale(1.1);
 }
 
-#northlink {
+#northlink,
+#loganair {
     text-decoration: none;
     display: inline-block;
     font-family: inherit;
@@ -203,6 +205,10 @@ nav.top a:hover {
 }
 
 #northlink:hover {
+    transform:scale(1.1);
+}
+
+#loganair:hover {
     transform:scale(1.1);
 }
 /*images and layout */
@@ -234,6 +240,8 @@ nav.top a:hover {
     border-radius: 20px;
     border: 4px solid white;
     flex-shrink: 0;
+    flex: 1;
+
     
 }
 .map {
@@ -425,7 +433,7 @@ input:checked + .tab-label {
 
 .tab-content {
     border: 1px solid #ccc;
-    padding: 1rem;
+    padding: 1rem 1rem;
     display: none;
     background-color: #d7ad37;
     color: white;
@@ -446,6 +454,7 @@ input:checked + .tab-label {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    justify-content: space space-between;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0rem 2rem 2rem 2rem;
