@@ -502,7 +502,7 @@ input:checked + .tab-label {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    justify-content: space space-between;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0rem 2rem 2rem 2rem;
