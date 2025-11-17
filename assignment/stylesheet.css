@@ -125,6 +125,7 @@ body {
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
+    margin: 0;
     
 }
 .section1 {
@@ -160,6 +161,7 @@ body {
     padding: 4rem 2rem;
     color: white;
     height: 100vh;
+    margin: 0;
 }
 
 .sectionfour1 {
@@ -493,8 +495,7 @@ input:checked + .tab-label {
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2 {
-    display:block;
-    
+    display:block;    
 }
 
 .tab-inner {
@@ -507,15 +508,79 @@ input:checked + .tab-label {
     padding: 0rem 2rem 2rem 2rem;
 }
 
-/* responsive design */
+/* responsive design for tablets */
 @media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
+    .section1, .section2, .section3, .sectionfour1, .sectionfour2, .sectionfour3, .sectionfour4 {
+        min-height: auto; 
+        height: auto;
+        padding: 2rem 1rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
+
+    #hero-section .nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch; /*smoother touch scrolling */
     }
 
-    #explore-pic {
+    #hero-section .nav a {
+        flex: 0 0 auto !important; 
+        white-space: nowrap !important;
+        font-size: 1.5rem;
+    }
+
+    #hero-section .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    #form {
+        width: 95%;
+        padding: 1rem;
+        min-width: unset;
+    }
+
+    #form textarea {
+        min-height: 180px;
+    }
+
+    #marketing {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #marketing label {
+        padding-left: 0;
+    }
+
+    #form input[type="submit"] {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .explore-pic,
+    .livework-pic,
+    .culture-pic,
+    .getting-pic {
         max-width: 100%;
+        height: auto;
+    }
+
+    .tab-inner {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        gap: 0.75rem;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 
     .content-section-header {
@@ -523,20 +588,71 @@ input:checked + .tab-label {
     }
 
     .hero-section-header {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+    .block-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1rem
+    }
+
+    .getting-pic {
+        width: 100%;
+        max-width: 220px; 
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .map {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    #form {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .visitor-opening th,
+    .visitor-opening td {
+        font-size: 0.9rem;
+    }
+    /* add newer sections into here */
+}
+
+/* responsive design for mobile */
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 1rem;
+        padding: 0.25rem 1rem;
+    }
+
+    #explore-pic {
+        max-width: 100%;
+    }
+
+    .content-section-header {
+        font-size: 1.5rem;
+    }
+
+    .hero-section-header {
+        font-size: 2rem;
     }
 
     .content {
         max-width: 100%;
+        font-size: 1rem;
     }
 
     .getting-pic {
         max-width: 100%;
-    }
-
-    .tab-inner {
-        flex-direction: column;
-        align-items:center;
     }
 
     .map {
@@ -545,13 +661,13 @@ input:checked + .tab-label {
     }
 
     #form {
-        width: 100%;
+        width: 95%;
         max-width: 100%;
     }
 
     .visitor-opening th,
     .visitor-opening td {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     /* add newer sections into here */
 }
