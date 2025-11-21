@@ -220,9 +220,10 @@ nav.top a:hover {
     max-width: 700px;
     margin: auto; 
     position: relative;
-    background: #d7ad37;
+    background: #d87635;
     border-radius: 20px;
     overflow: hidden;
+   
 }
 
 .slide {
@@ -242,6 +243,7 @@ nav.top a:hover {
     padding: 5px;
     font-family: inherit;
     color: white;
+    font-size: 20px;
 }
 
 .slidenav {
@@ -308,8 +310,9 @@ nav.top a:hover {
     max-width: 300px;
     border-collapse: collapse;
     margin-top: 1rem;
-    background-color:  #be9524;
+    background-color:  white;
     border: 3px solid white;
+    color: black;
 
 }
 
@@ -322,7 +325,9 @@ nav.top a:hover {
 }
 
 .visitor-opening th {
-    background-color: #d7ad37;
+    background-color: #d87635;
+    color: white;
+    font-size: 20px;
 }
 
 /* Ferry times table */
@@ -331,8 +336,9 @@ nav.top a:hover {
     max-width: 350px;
     border-collapse: collapse;
     margin-top: 1rem;
-    background-color: #be9524;
+    background-color: white;
     border: 3px solid white;
+    color: black;
 }
 
 .ferry-routes th, 
@@ -343,7 +349,9 @@ nav.top a:hover {
 }
 
 .ferry-routes th {
-    background-color: #d7ad37;
+    background-color: #d87635;
+    color: white;
+    font-size: 20px;
 }
 /* form styling */
 
@@ -461,31 +469,32 @@ input[type="radio"] {
 .tab-label {
     display:inline-block; 
     padding: 1rem;
-    background: #d7ad37;
+    background: #d87635;
     cursor: pointer;
     border: 1px solid #ccc;
     margin-right: -1px;
     color: white;
     transition: background 0.3s;
     font-family: inherit;
-    font-size: 16px;   
+    font-size: 20px;   
+    font-weight: bold;
 }
 
 .tab-label:hover {
-    background: #ddd;
+    background: #ff8b3d;
 }
 
 input:checked + .tab-label {
-    background: #edbe3e;
+    background: #ff8b3d;
     border-bottom: 1px solid white;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .tab-content {
     border: 1px solid #ccc;
     padding: 1rem 1rem;
     display: none;
-    background-color: #d7ad37;
+    background-color: #f6a133;
     color: white;
     width: 100%;
 }
