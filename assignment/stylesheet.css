@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: 'Lora', 'San-Serif';
-    background-color: #fdfcf9;
-    color: #333;
+    background-color: #000000;
+    color: white;
     line-height: 1.6;
     overflow-x: hidden; /*does allow content to become bigger than the screen, avoids horizontal scroll*/
 }
@@ -35,7 +35,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 0;
     pointer-events: none;
-}
+} 
 
 /* hero sections */
 
@@ -47,7 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: white (0, 0, 0);
     z-index: 1;
 }
 
@@ -93,7 +93,7 @@ body {
 #main-content {
     position: relative;
     z-index: 2;
-    background-color: #d7ad37;
+    background-color: #d87635;
     color: white;
 }
 
@@ -187,7 +187,7 @@ nav.top a {
     text-decoration: none;
     font-family: inherit;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 1rem;
     padding-top: 0.5rem;
